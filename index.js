@@ -70,7 +70,7 @@ let fridayFinal = new cron.CronJob('30 18 * * 5', () => {
 })
 
 // Monday meeting
-let mondayMeeting = new cron.CronJob('30 15 * * 1', () => {
+let mondayMeeting = new cron.CronJob('30 11 * * 1', () => {
     var guild = client.guilds.cache.get(guildId);
     core = guild.roles.cache.find(r => r.name === "Core");
 
@@ -79,7 +79,7 @@ let mondayMeeting = new cron.CronJob('30 15 * * 1', () => {
 
 
 // Friday meeting
-let fridayMeeting = new cron.CronJob('00 15 * * 5', () => {
+let fridayMeeting = new cron.CronJob('00 11 * * 5', () => {
     var guild = client.guilds.cache.get(guildId);
     core = guild.roles.cache.find(r => r.name === "Core");
 
