@@ -11,7 +11,7 @@ Concept design by the ever creative Chaamudi Kodikara.
 
 ### Set up
 
-1. Follow the instructions on [discord](https://discord.js.org/#/) to add features to your bot
+1. Follow the instructions on [discord](https://discord.js.org/#/) for more details on bots
 2. Follow instructions on the AWS console guide in the connect section of your EC2 instance
 3. Run the following commands in EC2
 
