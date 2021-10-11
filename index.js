@@ -27,7 +27,7 @@ let tuesday = new cron.CronJob('0 11 * * 2', () => {
     .setDescription(`\nhttps://gdsc.community.dev/rmit-university-melbourne/`)
     .setColor("#01ACFF");
 
-    client.channels.cache.get('864067701470396426').send({embeds: [tuesdayEmbed], content: role.name});
+    client.channels.cache.get('861456294888472596').send({embeds: [tuesdayEmbed], content: role.name});
 })
 
 // Send an automated announcement on Thursday at 11 AM
@@ -40,7 +40,7 @@ let thursday = new cron.CronJob('0 11 * * 4', () => {
     .setDescription(`\n Just popping here to remind all of you to make sure to **RSVP** to our event **TOMORROW** https://gdsc.community.dev/rmit-university-melbourne/`)
     .setColor("#01ACFF");
 
-    client.channels.cache.get('864067701470396426').send({embeds: [thursdayEmbed], content: role.name});
+    client.channels.cache.get('861456294888472596').send({embeds: [thursdayEmbed], content: role.name});
 })
 
 // Send an automated announcement on Friday at 5:30 PM
@@ -53,7 +53,7 @@ let fridayEve = new cron.CronJob('30 17 * * 5', () => {
     .setDescription(`\nGetcho butt over here: https://gdsc.community.dev/rmit-university-melbourne/`)
     .setColor("#01ACFF");
 
-    client.channels.cache.get('864067701470396426').send({embeds: [fridayEveEmbed], content: role.name});
+    client.channels.cache.get('861456294888472596').send({embeds: [fridayEveEmbed], content: role.name});
 })
 
 // Send an automated announcement on Friday at 6:30 PM
@@ -66,7 +66,7 @@ let fridayFinal = new cron.CronJob('30 18 * * 5', () => {
     .setDescription(`\nJoin through here: https://gdsc.community.dev/rmit-university-melbourne/`)
     .setColor("#01ACFF");
 
-    client.channels.cache.get('864067701470396426').send({embeds: [fridayFinalEmbed], content: role.name});
+    client.channels.cache.get('861456294888472596').send({embeds: [fridayFinalEmbed], content: role.name});
 })
 
 // Monday meeting
@@ -74,7 +74,7 @@ let mondayMeeting = new cron.CronJob('30 11 * * 1', () => {
     var guild = client.guilds.cache.get(guildId);
     core = guild.roles.cache.find(r => r.name === "Core");
 
-    client.channels.cache.get('864067701470396426').send(`${core}, meeting today at 3:30 PM!!!!! If can't make it, well, tell the real Mili!`);
+    client.channels.cache.get('861457216564363284').send(`${core}, meeting today at 3:30 PM!!!!! If can't make it, well, tell the real Mili!`);
 })
 
 
@@ -83,7 +83,7 @@ let fridayMeeting = new cron.CronJob('00 11 * * 5', () => {
     var guild = client.guilds.cache.get(guildId);
     core = guild.roles.cache.find(r => r.name === "Core");
 
-    client.channels.cache.get('864067701470396426').send(`${core}, meeting today at 3:00 PM!!!!! If can't make it, well, tell the real Mili!`);
+    client.channels.cache.get('861457216564363284').send(`${core}, meeting today at 3:00 PM!!!!! If can't make it, well, tell the real Mili!`);
 })
 
 
