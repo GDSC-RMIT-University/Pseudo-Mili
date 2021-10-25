@@ -86,13 +86,38 @@ let fridayMeeting = new cron.CronJob('00 11 * * 5', () => {
     client.channels.cache.get('861457216564363284').send(`${core}, meeting today at 3:00 PM!!!!! If can't make it, well, tell the real Mili!`);
 })
 
+// Entice people to join the hackathon
+// Send an automated announcement on Thursday at 11:00 AM reminding people of HackVision
+let hack = new cron.CronJob('00 11 * * 4', () => {
+    var guild = client.guilds.cache.get(guildId);
+    role = guild.roles.cache.find(r => r.name === "@everyone");
 
-// Send an automated announcement on Thursday at 11 AM
+    const hackEmbed = new Discord.MessageEmbed()
+    .setTitle("*Get ready for this!")
+    .setDescription(`\nJoin HackVision 2021: https://gdsc.community.dev/e/mcpbrj/`)
+    .setColor("#01ACFF");
 
-tuesday.start()
-thursday.start()
-fridayEve.start()
-fridayFinal.start()
+    client.channels.cache.get('861456294888472596').send({embeds: [hackEmbed], content: role.name});
+})
+
+let hack2 = new cron.CronJob('00 11 * * 1', () => {
+    var guild = client.guilds.cache.get(guildId);
+    role = guild.roles.cache.find(r => r.name === "@everyone");
+
+    const hack2Embed = new Discord.MessageEmbed()
+    .setTitle("*Y\'all ready for this!")
+    .setDescription(`\nJoin HackVision 2021: https://gdsc.community.dev/e/mcpbrj/`)
+    .setColor("#01ACFF");
+
+    client.channels.cache.get('861456294888472596').send({embeds: [hack2Embed], content: role.name});
+})
+
+// tuesday.start()
+// thursday.start()
+// fridayEve.start()
+// fridayFinal.start()
+hack.start()
+hack2.start()
 
 mondayMeeting.start()
 fridayMeeting.start()
