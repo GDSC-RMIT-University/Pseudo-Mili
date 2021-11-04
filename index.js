@@ -93,8 +93,8 @@ let hack = new cron.CronJob('00 11 * * 4', () => {
     role = guild.roles.cache.find(r => r.name === "@everyone");
 
     const hackEmbed = new Discord.MessageEmbed()
-    .setTitle("*Get ready for this!")
-    .setDescription(`\nJoin HackVision 2021: https://gdsc.community.dev/e/mcpbrj/`)
+    .setTitle("Join HackVision on the 20th Nov to make a change!")
+    .setDescription(`\nHackVision 2021: https://gdsc.community.dev/e/mcpbrj/`)
     .setColor("#01ACFF");
 
     client.channels.cache.get('861456294888472596').send({embeds: [hackEmbed], content: role.name});
@@ -105,8 +105,8 @@ let hack2 = new cron.CronJob('00 11 * * 1', () => {
     role = guild.roles.cache.find(r => r.name === "@everyone");
 
     const hack2Embed = new Discord.MessageEmbed()
-    .setTitle("*Y\'all ready for this!")
-    .setDescription(`\nJoin HackVision 2021: https://gdsc.community.dev/e/mcpbrj/`)
+    .setTitle("To Innovate, have fun and win prizes, join HackVision today :fire:")
+    .setDescription(`\nJoin HackVision 2021: https://gdsc.community.dev/e/mcpbrj/\nP.S Beginners are highly encouraged to join :bulb:`)
     .setColor("#01ACFF");
 
     client.channels.cache.get('861456294888472596').send({embeds: [hack2Embed], content: role.name});
