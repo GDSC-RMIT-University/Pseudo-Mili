@@ -23,11 +23,11 @@ let tuesday = new cron.CronJob('0 11 * * 2', () => {
     role = guild.roles.cache.find(r => r.name === "@everyone");
 
     const tuesdayEmbed = new Discord.MessageEmbed()
-    .setTitle("Hallo, don't forget to **RSVP** to our *stupefying* event this Friday :dna:")
+    .setTitle("Make sure to RSVP to our event this Friday at 6:30PM")
     .setDescription(`\nhttps://gdsc.community.dev/rmit-university-melbourne/`)
     .setColor("#01ACFF");
 
-    client.channels.cache.get('861456294888472596').send({embeds: [tuesdayEmbed], content: role.name});
+    client.channels.cache.get('861456294888472596').send({embeds: [tuesdayEmbed], content: `Oi ${role.name} getcho butts over here now 🔥`});
 })
 
 // Send an automated announcement on Thursday at 11 AM
@@ -36,7 +36,7 @@ let thursday = new cron.CronJob('0 11 * * 4', () => {
     role = guild.roles.cache.find(r => r.name === "@everyone");
 
     const thursdayEmbed = new Discord.MessageEmbed()
-    .setTitle("*Salve, fabulous people :rainbow: :rainbow: :rainbow:*")
+    .setTitle("*Save your seat for tomorrow's event :rainbow: :rainbow: :rainbow:*")
     .setDescription(`\n Just popping here to remind all of you to make sure to **RSVP** to our event **TOMORROW** https://gdsc.community.dev/rmit-university-melbourne/`)
     .setColor("#01ACFF");
 
@@ -49,11 +49,11 @@ let fridayEve = new cron.CronJob('30 17 * * 5', () => {
     role = guild.roles.cache.find(r => r.name === "@everyone");
 
     const fridayEveEmbed = new Discord.MessageEmbed()
-    .setTitle("**1 HOUR TO GO ** :bulb:")
-    .setDescription(`\nGetcho butt over here: https://gdsc.community.dev/rmit-university-melbourne/`)
+    .setTitle("**Join through the link below**")
+    .setDescription(`\nhttps://gdsc.community.dev/rmit-university-melbourne/`)
     .setColor("#01ACFF");
 
-    client.channels.cache.get('861456294888472596').send({embeds: [fridayEveEmbed], content: role.name});
+    client.channels.cache.get('861456294888472596').send({embeds: [fridayEveEmbed], content: `${role.name} **1 HOUR TO GO** :bulb:`});
 })
 
 // Send an automated announcement on Friday at 6:30 PM
@@ -62,11 +62,11 @@ let fridayFinal = new cron.CronJob('30 18 * * 5', () => {
     role = guild.roles.cache.find(r => r.name === "@everyone");
 
     const fridayFinalEmbed = new Discord.MessageEmbed()
-    .setTitle("*PSSSTTTT!!!*  **THE TIME HAS COME** :dancer: :fire: ")
-    .setDescription(`\nJoin through here: https://gdsc.community.dev/rmit-university-melbourne/`)
+    .setTitle("**Join through the link below**")
+    .setDescription(`\nhttps://gdsc.community.dev/rmit-university-melbourne/`)
     .setColor("#01ACFF");
 
-    client.channels.cache.get('861456294888472596').send({embeds: [fridayFinalEmbed], content: role.name});
+    client.channels.cache.get('861456294888472596').send({embeds: [fridayFinalEmbed], content: `*PSSSTTTT!!!* ${role.name} **THE TIME HAS COME** :fire:`});
 })
 
 // Monday meeting
@@ -112,12 +112,12 @@ let hack2 = new cron.CronJob('00 11 * * 1', () => {
     client.channels.cache.get('861456294888472596').send({embeds: [hack2Embed], content: role.name});
 })
 
-// tuesday.start()
-// thursday.start()
-// fridayEve.start()
-// fridayFinal.start()
-hack.start()
-hack2.start()
+tuesday.start()
+thursday.start()
+fridayEve.start()
+fridayFinal.start()
+// hack.start()
+// hack2.start()
 
 mondayMeeting.start()
 fridayMeeting.start()
