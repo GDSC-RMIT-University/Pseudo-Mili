@@ -112,10 +112,10 @@ let hack2 = new cron.CronJob('00 11 * * 1', () => {
     client.channels.cache.get('861456294888472596').send({embeds: [hack2Embed], content: role.name});
 })
 
-tuesday.start()
-thursday.start()
-fridayEve.start()
-fridayFinal.start()
+// tuesday.start()
+// thursday.start()
+// fridayEve.start()
+// fridayFinal.start()
 // hack.start()
 // hack2.start()
 
