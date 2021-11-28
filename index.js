@@ -10,12 +10,26 @@ const client = new Client({
         'DIRECT_MESSAGES', Intents.FLAGS.GUILD_MESSAGES]
 });
 
-var role = ''
-
 // When the client is ready, run this code (only once)
 client.once('ready', () => {
     console.log('Ready!');
 });
+
+var role = ''
+
+// Send automated message to testing on Sunday
+let test = new cron.CronJob('2 8 * * 0', () => {
+
+    var guild = client.guilds.cache.get(guildId);
+    role = guild.roles.cache.find(r => r.name === "@everyone");
+
+    const testingEmbed = new Discord.MessageEmbed()
+    .setTitle("What up, I'm still alive mofos")
+    .setDescription(`\nMWAHAHAHAHHA`)
+    .setColor("#01ACFF");
+
+    client.channels.cache.get('864067701470396426').send({embeds: [testingEmbed], content: `Testing`});
+})
 
 // Send an automated announcement on Tuesday at 11 AM
 let tuesday = new cron.CronJob('0 11 * * 2', () => {
@@ -77,7 +91,6 @@ let mondayMeeting = new cron.CronJob('30 11 * * 1', () => {
     client.channels.cache.get('861457216564363284').send(`${core}, meeting today at 3:30 PM!!!!! If can't make it, well, tell the real Mili!`);
 })
 
-
 // Friday meeting
 let fridayMeeting = new cron.CronJob('00 11 * * 5', () => {
     var guild = client.guilds.cache.get(guildId);
@@ -87,17 +100,17 @@ let fridayMeeting = new cron.CronJob('00 11 * * 5', () => {
 })
 
 // Entice people to join the hackathon
-// Send an automated announcement on Thursday at 11:00 AM reminding people of HackVision
-let hack = new cron.CronJob('00 11 * * 4', () => {
+// Send an automated announcement on Monday at 11:00 AM reminding people to battle
+let hack = new cron.CronJob('00 11 * * 1', () => {
     var guild = client.guilds.cache.get(guildId);
     role = guild.roles.cache.find(r => r.name === "@everyone");
 
     const hackEmbed = new Discord.MessageEmbed()
-    .setTitle("Join HackVision on the 20th Nov to make a change!")
-    .setDescription(`\nHackVision 2021: https://gdsc.community.dev/e/mcpbrj/`)
+    .setTitle("LuckyCharm would like for you to battle!")
+    .setDescription(`\nCheck out their slash commands for more :>`)
     .setColor("#01ACFF");
 
-    client.channels.cache.get('861456294888472596').send({embeds: [hackEmbed], content: role.name});
+    client.channels.cache.get('861456294888472596').send({embeds: [hackEmbed]});
 })
 
 let hack2 = new cron.CronJob('00 11 * * 1', () => {
@@ -112,11 +125,16 @@ let hack2 = new cron.CronJob('00 11 * * 1', () => {
     client.channels.cache.get('861456294888472596').send({embeds: [hack2Embed], content: role.name});
 })
 
+// Send announcements
+
+test.start()
+
 // tuesday.start()
 // thursday.start()
 // fridayEve.start()
 // fridayFinal.start()
-// hack.start()
+
+hack.start()
 // hack2.start()
 
 mondayMeeting.start()
