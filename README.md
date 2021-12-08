@@ -5,12 +5,8 @@ A fiery announcement bot to make life easier for the real Mili :>
 
 P.S When Aster feels particularly confident, they go by the name Pseudo Mili 💪🏾
 
-Image by the fabulously talented Isaac Chuah Yi Jie.
-Concept design by the ever creative Chaamudi Kodikara.
-
-### Main Features
-1. Send announcements and reminders of the GDSC RMIT events to the servers' _annoucement_ (heh GDSC RMIT Secret!) discord channel;
-2. Make Mili's life easy by being the responsible and on time good little bot that she is;
+### Main Feature
+Send announcements and reminders of the GDSC RMIT events to the servers' _annoucement_ (heh GDSC RMIT Secret!) discord channel;
 
 ### Set up
 
@@ -34,3 +30,10 @@ Concept design by the ever creative Chaamudi Kodikara.
     git pull
     forever start index.js
    ```
+
+### Contributors
+Code by the fiery [Milindi Kodikara](https://github.com/Milindi-Kodikara);
+
+Image by the fabulously talented [Isaac Chuah Yi Jie](https://github.com/perrywink);
+
+Concept design by the ever creative [Chaamudi Kodikara](https://github.com/ChaamudiK);
