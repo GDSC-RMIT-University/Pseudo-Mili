@@ -8,6 +8,9 @@ P.S When Aster feels particularly confident, they go by the name Pseudo Mili ðŸ’
 Image by the fabulously talented Isaac Chuah Yi Jie.
 Concept design by the ever creative Chaamudi Kodikara.
 
+### Main Features
+1. Send announcements and reminders of the GDSC RMIT events to the servers' _annoucement_ (heh GDSC RMIT Secret!) discord channel;
+2. Make Mili's life easy by being the responsible and on time good little bot that she is;
 
 ### Set up
 
