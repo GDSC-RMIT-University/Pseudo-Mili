@@ -15,20 +15,20 @@ Send announcements and reminders of the GDSC RMIT events to the servers' _annouc
 3. Run the following commands in EC2
 
     ```
-   // install git
-   // install npm 
+    // install git
+    // install npm 
     git clone <repo name>
     cd <git repo name>
     npm i
     npm install -g forever
 
-    forever start index.js
+    forever start --uid pseudo-mili index.js
     forever list
-    forever stop id
-   
+    forever stop pseudo-mili
+
     // Restart
     git pull
-    forever start index.js
+    forever start --uid pseudo-mili index.js
    ```
 
 ### Contributors
